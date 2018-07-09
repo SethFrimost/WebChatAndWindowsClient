@@ -24,6 +24,7 @@ namespace ACMVT.SignlR.WebChatServer
             return base.OnReconnected();
         }
 
+        
         public void Send(string user, string msg)
         {
             Clients.All.broadcast(user, msg);

@@ -9,45 +9,27 @@ namespace ACMVT.SignlR.ChatWindowsClient
     public class ChatClient
     {
         private readonly string serverUrl;
-        IHubProxy hub;
+        private readonly string user;
+        private const string GlobalRoom = "Global";
+
         HubConnection hubConnection;
-
-        private string room;
-        public string Room
-        {
-            get { return room; }
-            set {
-
-                // leave room
-
-                // set room
-                room = value;
-                
-                // join room
-            }
-        }
-
-        public ChatClient(string serverUrl)
+        public readonly Dictionary<string, ChatRoom> rooms = new Dictionary<string,ChatRoom>();
+        
+        public ChatClient(string serverUrl, string userName)
         {
             this.serverUrl = serverUrl;
+            this.user = userName;
             hubConnection = new HubConnection(serverUrl);
+            hubConnection.Start().Wait();
+            JoinRoom(GlobalRoom);
         }
 
 
-        private void JoinRoom()
+        private void JoinRoom(string room)
         {
             if (hubConnection == null) throw new Exception("No connexion");
             if (string.IsNullOrWhiteSpace(room)) throw new Exception("Romm is not valid");
-
-
-            hub = hubConnection.CreateHubProxy(room);
         }
 
-
-        private void Send(string name, string msg)
-        {
-            if (hub == null) throw new Exception("No room connexion");
-
-        }
     }
 }
