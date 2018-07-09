@@ -22,8 +22,9 @@ namespace ACMVT.SignlR.ChatWindowsClient
 
                 // set room
                 room = value;
-                
+
                 // join room
+                JoinRoom();
             }
         }
 
@@ -38,7 +39,6 @@ namespace ACMVT.SignlR.ChatWindowsClient
         {
             if (hubConnection == null) throw new Exception("No connexion");
             if (string.IsNullOrWhiteSpace(room)) throw new Exception("Romm is not valid");
-
 
             hub = hubConnection.CreateHubProxy(room);
         }
