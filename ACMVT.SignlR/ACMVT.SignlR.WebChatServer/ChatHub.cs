@@ -24,9 +24,10 @@ namespace ACMVT.SignlR.WebChatServer
             return base.OnReconnected();
         }
 
+        
         public void Send(string user, string msg)
         {
-            
+            Clients.All.broadcast(user, msg);
         }
 
         public void SendPrivate(string user, string msg, string destinationUser)

@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatClient.cs" />
+    <Compile Include="ChatRoom.cs" />
+    <Compile Include="EnumAcciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
