@@ -24,3 +24,17 @@ E:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\De
 E:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CopyComplete
 E:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
 E:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\ACMVT.SignlR.ChatWindowsClient.dll
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\Newtonsoft.Json.dll
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\ACMVT.SignlR.ChatWindowsClient.pdb
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\bin\Debug\Newtonsoft.Json.xml
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CopyComplete
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\programacion\ACMVT.SignlR\ACMVT.SignlR\SandBox\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

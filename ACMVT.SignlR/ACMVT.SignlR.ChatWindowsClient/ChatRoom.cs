@@ -24,22 +24,31 @@ namespace ACMVT.SignlR.ChatWindowsClient
             this.hub = hub;
 
             // broadcast
-            this.hub.On<string, string>(nameof(EnumAcciones.Broadcast), 
+            this.hub.On<string, string>(nameof(EnumAcciones.broadcast), 
                 (n, m) => MessageRecived?.Invoke(n, m)
             );
 
-            this.hub.On<string, string>(nameof(EnumAcciones.SendRoom),
+            //SendRoom
+            this.hub.On<string, string>(nameof(EnumAcciones.sendRoom),
                 (n, m) => MessageRecived?.Invoke(n, m)
             );
 
-            this.hub.On<string, string>(nameof(EnumAcciones.SendPrivate),
+            //SendPrivate
+            this.hub.On<string, string>(nameof(EnumAcciones.sendPrivate),
                 (n, m) => PrivateMessageRecived?.Invoke(n, m)
             );
+
+            hub.Invoke(nameof(EnumAcciones.joinRoom), room);
         }
 
         public void Send(string msg)
         {
-            hub.Invoke(nameof(EnumAcciones.SendRoom), room, user, msg);
+            hub.Invoke(nameof(EnumAcciones.sendRoom), room,  msg);
+        }
+
+        public void SendPrivate(string msg, string dest)
+        {
+            hub.Invoke(nameof(EnumAcciones.sendPrivate), msg, dest);
         }
 
     }

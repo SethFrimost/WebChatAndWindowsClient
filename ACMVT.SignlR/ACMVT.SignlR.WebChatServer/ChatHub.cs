@@ -9,6 +9,9 @@ namespace ACMVT.SignlR.WebChatServer
 {
     public class ChatHub : Hub
     {
+        static Dictionary<string, string> UserNames;
+        
+
         public override Task OnConnected()
         {
             return base.OnConnected();
@@ -24,27 +27,63 @@ namespace ACMVT.SignlR.WebChatServer
             return base.OnReconnected();
         }
 
-        public ChatHub() : base()
+
+        public void SetName(string name)
         {
-            Groups = new RoomManager();
+            if (UserNames == null) UserNames = new Dictionary<string, string>();
+
+            //this.Context.User.Identity.Name = name;
+
+            if (UserNames.ContainsKey(Context.ConnectionId))
+            {
+                UserNames[Context.ConnectionId] = name;
+            }
+            else
+            {
+                UserNames.Add(Context.ConnectionId, name);
+            }
         }
         
-        public void Send(string user, string msg)
+        private string GetUserName()
         {
-            Clients.All.broadcast(user, msg);
+            if (UserNames.ContainsKey(Context.ConnectionId))
+            {
+                return UserNames[Context.ConnectionId];
+            }
+            else
+            {
+                return Context.ConnectionId;
+            }
         }
 
-        public void SendRoom(string room, string user, string msg)
+
+        public void JoinRoom(string room)
         {
-            Clients.Clients((Groups as RoomManager).GetAllConnectionsId(room)).SendRoom(user, msg);
+            Groups.Add(Context.ConnectionId, room);
         }
 
-        public void SendPrivate(string user, string msg, string destinationUser)
+        public void LeaveRoom(string room)
+        {
+            Groups.Remove(Context.ConnectionId, room);
+        }
+
+
+        public void SendAll(string msg)
+        {
+            Clients.All.broadcast(GetUserName(), msg);
+        }
+
+        public void SendRoom(string room, string msg)
+        {
+            Clients.OthersInGroup(room).sendRoom(GetUserName(), msg);
+        }
+
+        public void SendPrivate(string msg, string destinationUser)
         {
             var dest = Clients.Client(destinationUser);
             if(dest != null)
             {
-                dest.SendPrivate(user, msg);
+                dest.sendPrivate(GetUserName(), msg);
             }
         }
 

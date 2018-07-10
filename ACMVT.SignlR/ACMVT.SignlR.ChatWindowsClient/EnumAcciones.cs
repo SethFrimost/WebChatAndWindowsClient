@@ -8,6 +8,6 @@ namespace ACMVT.SignlR.ChatWindowsClient
 {
     internal enum EnumAcciones
     {
-        JoinServer, LeaveServer, JoinRoom, LeaveRoom, SendRoom, SendAll, SendPrivate, Broadcast
+        joinServer, leaveServer, joinRoom, leaveRoom, sendAll, sendPrivate, broadcast, sendRoom, setName
     }
 }

@@ -30,10 +30,22 @@ namespace ConsoleApp2
                 }
             } while (text != "exit");
             */
-
-            var chat = new ChatClient("http://localhost:53237/", "Console");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("CHAT");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Server url:");
+            Console.ResetColor();
+            var url = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("User name:");
+            Console.ResetColor();
+            var user = Console.ReadLine();
+            
+            var chat = new ChatClient(url, user);
             chat.rooms[ChatClient.GlobalRoom].MessageRecived += General_MessageRecived;
             chat.rooms[ChatClient.GlobalRoom].PrivateMessageRecived += General_PrivateMessageRecived;
+
+            //Console.Clear();
 
             string text;
             do
@@ -48,12 +60,22 @@ namespace ConsoleApp2
 
         private static void General_MessageRecived(string name, string msg)
         {
-            Console.Write($"[1m{name}[0m: {msg}");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write($"{name}: ");
+            Console.ResetColor();
+            Console.Write(msg);
+            Console.WriteLine();
         }
 
         private static void General_PrivateMessageRecived(string name, string msg)
         {
-            Console.Write($"[31private => [1m{name}[0m[0m: {msg}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write($"private => {name}: ");
+            //Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Write(msg);
+            Console.WriteLine();
+            //Console.Write($"[31private => [1m{name}[0m[0m: {msg}");
         }
     }
 }

@@ -23,9 +23,10 @@ namespace ACMVT.SignlR.ChatWindowsClient
             hubConnection = new HubConnection(serverUrl);
             hub = hubConnection.CreateHubProxy("ChatHub");
             hubConnection.Start().Wait();
+            hub.Invoke(nameof(EnumAcciones.setName), userName);
+
             JoinRoom(GlobalRoom);
         }
-
 
         private void JoinRoom(string room)
         {
@@ -33,7 +34,6 @@ namespace ACMVT.SignlR.ChatWindowsClient
             if (string.IsNullOrWhiteSpace(room)) throw new Exception("Romm is not valid");
 
             rooms.Add(room, new ChatRoom(hub, user,room));
-
         }
 
     }
