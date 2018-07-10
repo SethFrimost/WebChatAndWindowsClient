@@ -24,10 +24,19 @@ namespace ACMVT.SignlR.WebChatServer
             return base.OnReconnected();
         }
 
+        public ChatHub() : base()
+        {
+            Groups = new RoomManager();
+        }
         
         public void Send(string user, string msg)
         {
             Clients.All.broadcast(user, msg);
+        }
+
+        public void SendRoom(string room, string user, string msg)
+        {
+            Clients.Clients((Groups as RoomManager).GetAllConnectionsId(room)).SendRoom(user, msg);
         }
 
         public void SendPrivate(string user, string msg, string destinationUser)
@@ -35,8 +44,9 @@ namespace ACMVT.SignlR.WebChatServer
             var dest = Clients.Client(destinationUser);
             if(dest != null)
             {
-                dest.privateMessage(user, msg);
+                dest.SendPrivate(user, msg);
             }
         }
+
     }
 }

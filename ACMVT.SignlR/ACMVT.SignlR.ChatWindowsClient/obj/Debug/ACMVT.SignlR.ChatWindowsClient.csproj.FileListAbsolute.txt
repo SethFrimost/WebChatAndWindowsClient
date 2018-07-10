@@ -1,0 +1,11 @@
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\ACMVT.SignlR.ChatWindowsClient.dll
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\ACMVT.SignlR.ChatWindowsClient.pdb
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\Newtonsoft.Json.dll
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\bin\Debug\Newtonsoft.Json.xml
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\obj\Debug\ACMVT.SignlR.ChatWindowsClient.csprojAssemblyReference.cache
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\obj\Debug\ACMVT.SignlR.ChatWindowsClient.csproj.CoreCompileInputs.cache
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\obj\Debug\ACMVT.SignlR.ChatWindowsClient.csproj.CopyComplete
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\obj\Debug\ACMVT.SignlR.ChatWindowsClient.dll
+E:\programacion\ACMVT.SignlR\ACMVT.SignlR\ACMVT.SignlR.ChatWindowsClient\obj\Debug\ACMVT.SignlR.ChatWindowsClient.pdb

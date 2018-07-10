@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMVT.SignlR.WebChatServer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMVT.SignlR.ChatWindowsClient", "ACMVT.SignlR.ChatWindowsClient\ACMVT.SignlR.ChatWindowsClient.csproj", "{D2FCEB24-2D19-419B-9595-F6825ED67554}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandbox", "Sandbox", "{26A9409E-2AB3-4004-801F-1E4AA585C21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "SandBox\ConsoleApp2\ConsoleApp2\ConsoleApp2.csproj", "{578C95DC-E102-4414-8DEC-38C580EC35E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{D2FCEB24-2D19-419B-9595-F6825ED67554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2FCEB24-2D19-419B-9595-F6825ED67554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2FCEB24-2D19-419B-9595-F6825ED67554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578C95DC-E102-4414-8DEC-38C580EC35E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578C95DC-E102-4414-8DEC-38C580EC35E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578C95DC-E102-4414-8DEC-38C580EC35E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578C95DC-E102-4414-8DEC-38C580EC35E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{578C95DC-E102-4414-8DEC-38C580EC35E5} = {26A9409E-2AB3-4004-801F-1E4AA585C21A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {193CDDCC-99AF-4A67-8A4C-3598409F8892}

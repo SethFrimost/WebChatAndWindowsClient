@@ -14,7 +14,8 @@ namespace ACMVT.SignlR.ChatWindowsClient
         private readonly IHubProxy hub;
 
         public delegate void OnMessageRecived(string name, string msg);
-        public OnMessageRecived MessageRecived;
+        public event OnMessageRecived MessageRecived;
+        public event OnMessageRecived PrivateMessageRecived;
 
         public ChatRoom(IHubProxy hub, string userName, string roomName)
         {
@@ -30,15 +31,16 @@ namespace ACMVT.SignlR.ChatWindowsClient
             this.hub.On<string, string>(nameof(EnumAcciones.SendRoom),
                 (n, m) => MessageRecived?.Invoke(n, m)
             );
+
+            this.hub.On<string, string>(nameof(EnumAcciones.SendPrivate),
+                (n, m) => PrivateMessageRecived?.Invoke(n, m)
+            );
         }
 
-
-        private void Send(string msg)
+        public void Send(string msg)
         {
             hub.Invoke(nameof(EnumAcciones.SendRoom), room, user, msg);
         }
 
-        
-        
     }
 }
