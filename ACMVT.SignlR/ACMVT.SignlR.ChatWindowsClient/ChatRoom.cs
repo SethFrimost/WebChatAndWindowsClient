@@ -9,7 +9,7 @@ namespace ACMVT.SignlR.ChatWindowsClient
 {
     public class ChatRoom
     {
-        private readonly string room;
+        public readonly string room;
         private readonly string user;
         private readonly IHubProxy hub;
 
